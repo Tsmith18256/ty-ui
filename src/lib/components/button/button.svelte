@@ -1,5 +1,5 @@
 <script>
-	import { BUTTON_APPEARANCES, BUTTON_BACKGROUND_COLORS } from './button.constants.js';
+  import { BUTTON_APPEARANCES, BUTTON_BACKGROUND_COLORS } from './button.constants.js';
 
   /**
    * The text to show inside the button.
@@ -24,8 +24,9 @@
 <button
   class="button"
   style:--background-color={BUTTON_BACKGROUND_COLORS[appearance]}
-  class:appearance-primary={appearance === BUTTON_APPEARANCES.primary}
-  {disabled}>
+  {disabled}
+  on:click|stopPropagation
+>
   {label}
 </button>
 
@@ -36,7 +37,7 @@
     border: none;
     border-radius: 0.25rem;
 
-    color: #EEE;
+    color: #eee;
     font-weight: bold;
 
     background-color: var(--background-color);

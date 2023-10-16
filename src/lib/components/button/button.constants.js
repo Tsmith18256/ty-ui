@@ -9,7 +9,7 @@ export const BUTTON_APPEARANCES = /** @type {const} */ ({
   secondary: 'secondary',
   negative: 'negative',
   danger: 'danger',
-  warning: 'warning'
+  warning: 'warning',
 });
 
 export const BUTTON_BACKGROUND_COLORS = /** @type {const} */ ({
@@ -17,5 +17,5 @@ export const BUTTON_BACKGROUND_COLORS = /** @type {const} */ ({
   [BUTTON_APPEARANCES.secondary]: COLORS.secondary,
   [BUTTON_APPEARANCES.negative]: COLORS.negative,
   [BUTTON_APPEARANCES.danger]: COLORS.danger,
-  [BUTTON_APPEARANCES.warning]: COLORS.warning
+  [BUTTON_APPEARANCES.warning]: COLORS.warning,
 });
