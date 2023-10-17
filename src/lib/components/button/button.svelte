@@ -32,6 +32,7 @@
 
 <style>
   .button {
+    min-width: 7rem;
     padding: 1rem;
 
     border: none;
