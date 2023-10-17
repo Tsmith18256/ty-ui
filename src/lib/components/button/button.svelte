@@ -42,8 +42,18 @@
 
     background-color: var(--background-color);
 
+    cursor: pointer;
+
     &[disabled] {
       opacity: 0.5;
+    }
+
+    &:hover {
+      background-color: color-mix(in srgb, #000 15%, var(--background-color));
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, #000 35%, var(--background-color));
     }
   }
 </style>
