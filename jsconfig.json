@@ -1,11 +1,31 @@
 {
   "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
+    // Module setup.
+    "module": "NodeNext",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+
+    // Files.
     "resolveJsonModule": true,
-    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
-    "moduleResolution": "NodeNext"
-  }
+    "checkJs": true,
+
+    // Rules
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
+
+  },
+
+  // Temporary
+  "exclude": ["./src/stories/**/*"]
 }
