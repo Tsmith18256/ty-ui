@@ -1,28 +1,26 @@
-<script>
+<script lang="ts">
+  import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
+  import type { ButtonAppearance } from '$lib/components/button/button.types.js';
+  import { getButtonBackgroundColor } from '$lib/components/button/button.utils.js';
   import Icon from '$lib/components/icon/icon.svelte';
-  import { BUTTON_APPEARANCES, BUTTON_BACKGROUND_COLORS } from './button.constants.js';
+  import type { IconImage } from '$lib/components/icon/icon.types.js';
+  import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
   /**
    * The text to show inside the button.
-   *
-   * @type {string}
    */
-  export let label;
+  export let label: string;
 
   /**
    * The appearance of the button, which impacts background color. If no appearance is provided, the primary color will
    * be used.
-   *
-   * @type {import('./button.constants.js').ButtonAppearance}
    */
-  export let appearance = BUTTON_APPEARANCES.primary;
+  export let appearance: ButtonAppearance = BUTTON_APPEARANCES.primary;
 
   /**
    * The icon to display next to the label in the button. Only use if an icon button is desired.
-   *
-   * @type {import('$lib/components/icon/icon.constants.js').IconImage | undefined}
    */
-  export let icon = undefined;
+  export let icon: IconImage | undefined = undefined;
 
   /**
    * Whether or not the button is currently disabled.
@@ -32,7 +30,7 @@
 
 <button
   class="button"
-  style:--background-color={BUTTON_BACKGROUND_COLORS[appearance]}
+  style:--background-color={getButtonBackgroundColor(appearance, $tokens.colors)}
   {disabled}
   on:click|stopPropagation
 >

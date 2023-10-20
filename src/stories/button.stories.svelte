@@ -1,14 +1,14 @@
-<script context="module">
+<script context="module" lang="ts">
+  import type { MetaProps } from '@storybook/addon-svelte-csf';
   import Button from '$lib/components/button/button.svelte';
 
-  /** @type { import('@storybook/addon-svelte-csf').MetaProps } */
-  export const meta = {
+  export const meta: MetaProps = {
     title: 'Button',
     component: Button,
   };
 </script>
 
-<script>
+<script lang="ts">
   import './assets/fonts/css/fontawesome.min.css';
   import './assets/fonts/css/regular.min.css';
 
