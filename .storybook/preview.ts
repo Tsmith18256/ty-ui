@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/svelte';
 import { COLORS, THEMES } from '../src/lib/stores/tokens/tokens.constants.js';
+import { themeLoader } from './theme-loader.js';
 
 const preview: Preview = {
   parameters: {
@@ -24,6 +25,7 @@ const preview: Preview = {
       },
     },
   },
+  loaders: [themeLoader]
 };
 
 export default preview;
