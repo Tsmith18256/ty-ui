@@ -30,6 +30,7 @@
 
 <button
   class="button"
+  style:--color={$tokens.colors.buttonText}
   style:--background-color={getButtonBackgroundColor(appearance, $tokens.colors)}
   {disabled}
   on:click|stopPropagation
@@ -50,7 +51,7 @@
     border: none;
     border-radius: 0.25rem;
 
-    color: #eee;
+    color: var(--color);
     font-weight: bold;
 
     background-color: var(--background-color);

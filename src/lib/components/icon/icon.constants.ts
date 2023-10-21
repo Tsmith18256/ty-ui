@@ -13,9 +13,9 @@ export const ICON_IMAGES = {
  * Icon sizes, to be used with size prop for the Icon component.
  */
 export const ICON_SIZES = {
-  extraSmall: 'extra-small',
-  small: 'small',
-  medium: 'medium',
-  large: 'large',
-  extraLarge: 'extra-large',
+  extraSmall: '0.5rem',
+  small: '0.75rem',
+  medium: '1rem',
+  large: '1.5rem',
+  extraLarge: '2rem',
 } as const;

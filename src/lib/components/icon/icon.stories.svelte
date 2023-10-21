@@ -9,8 +9,8 @@
 </script>
 
 <script lang="ts">
-  import './assets/fonts/css/fontawesome.min.css';
-  import './assets/fonts/css/regular.min.css';
+  import '$lib/assets/fonts/css/fontawesome.min.css';
+  import '$lib/assets/fonts/css/regular.min.css';
 
   import { Story, Template } from '@storybook/addon-svelte-csf';
   import { ICON_IMAGES } from '$lib/components/icon/icon.constants.js';

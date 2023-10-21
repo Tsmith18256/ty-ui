@@ -8,22 +8,21 @@ export const THEMES = {
   light: 'light',
 } as const;
 
-const negative = '#777';
-
-const darkColors = {
+const darkColors: IColors = {
   primary: '#0e21a0',
   secondary: '#4d2db7',
   tertiary: '#9d44c0',
   quaternary: '#ec53b0',
-  negative,
+  negative: '#777',
   danger: '#ff4242',
   warning: '#ff9142',
-  background: '#030826',
   text: '#ddd',
-  border: negative,
+  buttonText: '#eee',
+  background: '#030826',
+  get border() { return this.negative },
 };
 
-const lightColors = {
+const lightColors: IColors = {
   ...darkColors,
   background: '#f1f3ff',
   text: '#222',

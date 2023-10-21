@@ -19,6 +19,7 @@ export interface IColors {
   warning: string;
   background: string;
   text: string;
+  buttonText: string;
   border: string;
 }
 
