@@ -45,6 +45,8 @@
 
 <style>
   .button {
+    flex: 1;
+
     min-width: 7rem;
     padding: 1rem;
 
