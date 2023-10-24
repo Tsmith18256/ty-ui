@@ -23,8 +23,5 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "strict": true
-  },
-
-  // Temporary
-  "exclude": ["./src/stories/**/*"]
+  }
 }

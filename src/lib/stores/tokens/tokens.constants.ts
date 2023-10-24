@@ -20,6 +20,7 @@ const darkColors: IColors = {
   buttonText: '#eee',
   background: '#030826',
   get border() { return this.negative },
+  overlayBackground: '#000000dd',
 };
 
 const lightColors: IColors = {
@@ -35,3 +36,12 @@ export const COLORS: { [Property in Theme]: IColors } = {
   [THEMES.dark]: darkColors,
   [THEMES.light]: lightColors,
 };
+
+/**
+ * An object containing the inclusive minimum width that each breakpoint starts at.
+ */
+export const BREAKPOINTS = {
+  tablet: 769,
+  desktopSmall: 1025,
+  desktopLarge: 1201
+} as const;

@@ -1,9 +1,10 @@
 import { readonly, writable } from 'svelte/store';
-import { COLORS, THEMES } from '$lib/stores/tokens/tokens.constants.js';
+import { BREAKPOINTS, COLORS, THEMES } from '$lib/stores/tokens/tokens.constants.js';
 import type { ITokens, Theme } from '$lib/stores/tokens/tokens.types.js';
 
 const writableTokens = writable<ITokens>({
-  colors: COLORS[THEMES.dark]
+  colors: COLORS[THEMES.dark],
+  breakpoints: BREAKPOINTS,
 });
 
 /**
