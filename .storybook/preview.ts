@@ -10,13 +10,13 @@ const preview: Preview = {
       values: [
         {
           name: THEMES.dark,
-          value: COLORS[THEMES.dark].background
+          value: COLORS[THEMES.dark].background,
         },
         {
           name: THEMES.light,
-          value: COLORS[THEMES.light].background
+          value: COLORS[THEMES.light].background,
         },
-      ]
+      ],
     },
     controls: {
       matchers: {
@@ -25,7 +25,7 @@ const preview: Preview = {
       },
     },
   },
-  loaders: [themeLoader]
+  loaders: [themeLoader],
 };
 
 export default preview;

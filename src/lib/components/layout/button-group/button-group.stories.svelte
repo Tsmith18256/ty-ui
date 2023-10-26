@@ -1,16 +1,12 @@
 <script context="module" lang="ts">
-  import type { MetaProps } from '@storybook/addon-svelte-csf';
+  import { type MetaProps, Story, Template } from '@storybook/addon-svelte-csf';
+  import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
   import ButtonGroup from './button-group.svelte';
 
   export const meta: MetaProps = {
     title: 'Button Group',
     component: ButtonGroup,
   };
-</script>
-
-<script lang="ts">
-  import { Story, Template } from '@storybook/addon-svelte-csf';
-  import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
 </script>
 
 <Template let:args>

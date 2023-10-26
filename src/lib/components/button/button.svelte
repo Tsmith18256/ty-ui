@@ -1,9 +1,9 @@
 <script lang="ts">
   import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
   import type { ButtonAppearance } from '$lib/components/button/button.types.js';
-  import { getButtonBackgroundColor } from '$lib/components/button/button.utils.js';
   import Icon from '$lib/components/icon/icon.svelte';
   import type { IconImage } from '$lib/components/icon/icon.types.js';
+  import { getButtonBackgroundColor } from '$lib/components/button/button.utils.js';
   import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
   /**

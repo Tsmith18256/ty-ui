@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { ICON_SIZES } from '$lib/components/icon/icon.constants.js';
   import type { IconImage, IconSize } from '$lib/components/icon/icon.types.js';
+  import { ICON_SIZES } from '$lib/components/icon/icon.constants.js';
   import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
   /**

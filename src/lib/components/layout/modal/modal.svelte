@@ -1,15 +1,16 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
-  import { tokens } from '$lib/stores/tokens/tokens.store.js';
   import { isMobileWidth } from '$lib/stores/tokens/tokens.utils.js';
+  import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
   export let isVisible = false;
   export let testId: string | undefined = undefined;
 
+  const mobileFadeDuration = 0;
   let innerWidth: number;
 
   // Setting duration to undefined tells Svelte to use the default duration.
-  $: fadeDuration = isMobileWidth(innerWidth) ? 0 : undefined;
+  $: fadeDuration = isMobileWidth(innerWidth) ? mobileFadeDuration : undefined;
 
   const onKeyUp = (e: KeyboardEvent) => {
     if (e.key === 'Escape') {
@@ -20,8 +21,6 @@
   const hideModal = () => {
     isVisible = false;
   };
-
-  $: console.log($tokens.colors);
 </script>
 
 {#if isVisible}

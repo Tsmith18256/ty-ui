@@ -1,20 +1,15 @@
 <script context="module" lang="ts">
-  import type { MetaProps } from '@storybook/addon-svelte-csf';
+  import '$lib/assets/fonts/css/fontawesome.min.css';
+  import '$lib/assets/fonts/css/regular.min.css';
+  import { type MetaProps, Story, Template } from '@storybook/addon-svelte-csf';
+  import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
   import Button from '$lib/components/button/button.svelte';
+  import { ICON_IMAGES } from '$lib/components/icon/icon.constants.js';
 
   export const meta: MetaProps = {
     title: 'Button',
     component: Button,
   };
-</script>
-
-<script lang="ts">
-  import '$lib/assets/fonts/css/fontawesome.min.css';
-  import '$lib/assets/fonts/css/regular.min.css';
-
-  import { Story, Template } from '@storybook/addon-svelte-csf';
-  import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
-  import { ICON_IMAGES } from '$lib/components/icon/icon.constants.js';
 </script>
 
 <Template let:args>

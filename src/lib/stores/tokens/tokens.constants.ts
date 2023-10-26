@@ -19,7 +19,9 @@ const darkColors: IColors = {
   text: '#ddd',
   buttonText: '#eee',
   background: '#030826',
-  get border() { return this.negative },
+  get border() {
+    return this.negative;
+  },
   overlayBackground: '#000000dd',
 };
 
@@ -43,5 +45,5 @@ export const COLORS: { [Property in Theme]: IColors } = {
 export const BREAKPOINTS = {
   tablet: 769,
   desktopSmall: 1025,
-  desktopLarge: 1201
+  desktopLarge: 1201,
 } as const;
