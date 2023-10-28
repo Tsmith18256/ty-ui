@@ -1,31 +1,32 @@
 <script lang="ts">
-  import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
-  import type { ButtonAppearance } from '$lib/components/button/button.types.js';
+  import { BUTTON_APPEARANCES } from './button.constants.js';
+  import type { ButtonAppearance } from './button.types.js';
   import Icon from '$lib/components/icon/icon.svelte';
   import type { IconImage } from '$lib/components/icon/icon.types.js';
-  import { getButtonBackgroundColor } from '$lib/components/button/button.utils.js';
+  import { getButtonBackgroundColor } from './button.utils.js';
   import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
   /**
    * The text to show inside the button.
    */
   export let label: string;
-
   /**
    * The appearance of the button, which impacts background color. If no appearance is provided, the primary color will
    * be used.
    */
   export let appearance: ButtonAppearance = BUTTON_APPEARANCES.primary;
-
   /**
    * The icon to display next to the label in the button. Only use if an icon button is desired.
    */
   export let icon: IconImage | undefined = undefined;
-
   /**
    * Whether or not the button is currently disabled.
    */
   export let disabled = false;
+  /**
+   * Test ID for the button.
+   */
+  export let testId: string | undefined = undefined;
 </script>
 
 <button
@@ -34,6 +35,7 @@
   style:--background-color={getButtonBackgroundColor(appearance, $tokens.colors)}
   {disabled}
   on:click|stopPropagation
+  data-testid={testId}
 >
   {#if icon}
     <span class="icon">

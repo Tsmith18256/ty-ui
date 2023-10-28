@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
   import { type MetaProps, Story, Template } from '@storybook/addon-svelte-csf';
-  import Button from '$lib/components/button/button.svelte';
+  import Button from '$lib/components/buttons/button/button.svelte';
   import Modal from './modal.svelte';
 
   export const meta: MetaProps = {

@@ -2,8 +2,8 @@
   import '$lib/assets/fonts/css/fontawesome.min.css';
   import '$lib/assets/fonts/css/regular.min.css';
   import { type MetaProps, Story, Template } from '@storybook/addon-svelte-csf';
-  import { BUTTON_APPEARANCES } from '$lib/components/button/button.constants.js';
-  import Button from '$lib/components/button/button.svelte';
+  import { BUTTON_APPEARANCES } from './button.constants.js';
+  import Button from './button.svelte';
   import { ICON_IMAGES } from '$lib/components/icon/icon.constants.js';
 
   export const meta: MetaProps = {
