@@ -12,8 +12,10 @@ export const themeLoader: LoaderFunction<SvelteRenderer> = async opts => {
   // When Storybook first loads, the background value is `null`, even though it will be using dark theme by default. So
   // the default theme here is dark.
   if (value === COLORS[THEMES.light].background) {
+    console.log('Updating to light theme');
     setTheme(THEMES.light);
   } else {
+    console.log('Updating to dark theme');
     setTheme(THEMES.dark);
   }
 

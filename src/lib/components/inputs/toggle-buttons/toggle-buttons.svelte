@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { FONTS } from '$lib/constants/fonts/fonts.constants.js';
   import type { IToggleButton } from './toggle-buttons.types.js';
   import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
@@ -8,8 +9,6 @@
    * @todo How to use a generic to ensure this is always one of the IToggleButton values?
    */
   export let value: string;
-
-  $: console.log(value);
 </script>
 
 <div class="container">
@@ -19,6 +18,11 @@
       class:toggle-button-first={index === 0}
       class:toggle-button-last={index === toggleButtons.length - 1}
       class:toggle-button-active={value === toggleButton.value}
+      style:--font-family={FONTS.body.family}
+      style:--font-style={FONTS.body.style}
+      style:--background-color={value === toggleButton.value
+        ? $tokens.colors.primary
+        : $tokens.colors.inactiveToggleButtonBackground}
     >
       <input
         class="input"
@@ -30,7 +34,9 @@
       />
       <label
         class="label"
-        style:--color={value === toggleButton.value ? $tokens.colors.text : $tokens.colors.negative}
+        style:--color={value === toggleButton.value
+          ? $tokens.colors.buttonText
+          : $tokens.colors.inactiveToggleButtonColor}
         for="{groupName}.{toggleButton.value}">{toggleButton.label}</label
       >
     </div>
@@ -51,6 +57,10 @@
     display: block;
     height: 100%;
     width: 100%;
+
+    font: var(--font-style) 500 1rem var(--font-family);
+    letter-spacing: 0.05rem;
+
     color: var(--color);
   }
 
@@ -61,13 +71,12 @@
     padding: 0.5rem;
 
     text-align: center;
-    border-left: 2px solid #777;
-    border-top: 2px solid #777;
-    border-bottom: 2px solid #777;
+
+    background-color: var(--background-color);
   }
 
   .toggle-button-active {
-    background-color: #333;
+    background-color: #0e21a0;
   }
 
   .toggle-button-first {
@@ -76,7 +85,6 @@
   }
 
   .toggle-button-last {
-    border-right: 2px solid #777;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
   }

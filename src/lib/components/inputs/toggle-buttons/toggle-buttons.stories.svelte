@@ -1,4 +1,5 @@
 <script context="module" lang="ts">
+  import '$lib/assets/fonts/roboto/css/roboto.css';
   import { type MetaProps, Story, Template } from '@storybook/addon-svelte-csf';
   import ToggleButtons from './toggle-buttons.svelte';
 

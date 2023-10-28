@@ -23,12 +23,16 @@ const darkColors: IColors = {
     return this.negative;
   },
   overlayBackground: '#000000dd',
+  inactiveToggleButtonColor: '#AAA',
+  inactiveToggleButtonBackground: '#555'
 };
 
 const lightColors: IColors = {
   ...darkColors,
   background: '#f1f3ff',
   text: '#222',
+  inactiveToggleButtonColor: '#DDD',
+  inactiveToggleButtonBackground: '#999'
 };
 
 /**

@@ -25,6 +25,9 @@ export interface IColors {
   buttonText: string;
   border: string;
   overlayBackground: string;
+  // Specific component colors.
+  inactiveToggleButtonColor: string;
+  inactiveToggleButtonBackground: string;
 }
 
 export interface ITokens {
