@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Button from '$lib/components/button/button.svelte';
+  import Button from '$lib/components/buttons/button/button.svelte';
   import type { ComponentProps } from 'svelte';
 
   export let buttons: ComponentProps<Button>[];

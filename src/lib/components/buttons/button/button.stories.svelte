@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
-  import '$lib/assets/fonts/css/fontawesome.min.css';
-  import '$lib/assets/fonts/css/regular.min.css';
+  import '$lib/assets/fonts/fontawesome/css/fontawesome.min.css';
+  import '$lib/assets/fonts/fontawesome/css/regular.min.css';
+  import '$lib/assets/fonts/roboto/css/roboto.css';
   import { type MetaProps, Story, Template } from '@storybook/addon-svelte-csf';
   import { BUTTON_APPEARANCES } from './button.constants.js';
   import Button from './button.svelte';
