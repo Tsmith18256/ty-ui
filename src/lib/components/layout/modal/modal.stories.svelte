@@ -4,7 +4,7 @@
   import Modal from './modal.svelte';
 
   export const meta: MetaProps = {
-    title: 'Modal',
+    title: 'Layout/Modal',
     component: Modal,
   };
 </script>

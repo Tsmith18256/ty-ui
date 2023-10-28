@@ -5,7 +5,7 @@
   import ButtonGroup from './button-group.svelte';
 
   export const meta: MetaProps = {
-    title: 'Button Group',
+    title: 'Layout/Button Group',
     component: ButtonGroup,
   };
 </script>

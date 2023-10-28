@@ -3,7 +3,7 @@
   import ToggleButtons from './toggle-buttons.svelte';
 
   export const meta: MetaProps = {
-    title: 'Toggle Buttons',
+    title: 'Components/Inputs/Toggle Buttons',
     component: ToggleButtons,
   };
 </script>

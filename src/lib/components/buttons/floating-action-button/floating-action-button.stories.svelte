@@ -4,7 +4,7 @@
   import { ICON_IMAGES } from '$lib/components/icon/icon.constants.js';
 
   export const meta: MetaProps = {
-    title: 'Floating Action Button',
+    title: 'Components/Buttons/Floating Action Button',
     component: FloatingActionButton,
   };
 </script>

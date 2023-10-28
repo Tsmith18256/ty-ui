@@ -8,7 +8,7 @@
   import { ICON_IMAGES } from '$lib/components/icon/icon.constants.js';
 
   export const meta: MetaProps = {
-    title: 'Button',
+    title: 'Components/Buttons/Button',
     component: Button,
   };
 </script>

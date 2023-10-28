@@ -6,7 +6,7 @@
   import Icon from '$lib/components/icon/icon.svelte';
 
   export const meta: MetaProps = {
-    title: 'Icon',
+    title: 'Components/Icon',
     component: Icon,
   };
 </script>
