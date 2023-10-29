@@ -1,4 +1,4 @@
-import type { IColors, Theme } from '$lib/stores/tokens/tokens.types.js';
+import type { IColors, IFont, Theme } from '$lib/stores/tokens/tokens.types.js';
 
 /**
  * The different themes available to use.
@@ -17,13 +17,14 @@ const darkColors: IColors = {
   danger: '#ff4242',
   warning: '#ff9142',
   text: '#ddd',
-  buttonText: '#eee',
   background: '#030826',
   get border() {
     return this.negative;
   },
   overlayBackground: '#000000dd',
-  inactiveToggleButtonColor: '#AAA',
+  buttonText: '#eee',
+  placeholderText: '#aaa',
+  inactiveToggleButtonColor: '#aaa',
   inactiveToggleButtonBackground: '#555'
 };
 
@@ -31,7 +32,7 @@ const lightColors: IColors = {
   ...darkColors,
   background: '#f1f3ff',
   text: '#222',
-  inactiveToggleButtonColor: '#DDD',
+  inactiveToggleButtonColor: '#ddd',
   inactiveToggleButtonBackground: '#999'
 };
 
@@ -51,3 +52,21 @@ export const BREAKPOINTS = {
   desktopSmall: 1025,
   desktopLarge: 1201,
 } as const;
+
+type FontPlacements = 'body' | 'heading';
+
+/**
+ * The different fonts used.
+ */
+export const FONTS: { [Key in FontPlacements]: IFont } = {
+  body: {
+    family: 'Roboto',
+    weight: 'normal',
+    style: 'normal',
+  },
+  heading: {
+    family: 'Archivo',
+    weight: '900',
+    style: 'normal',
+  },
+};

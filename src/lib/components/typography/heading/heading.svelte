@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { FONTS } from '$lib/constants/fonts/fonts.constants.js';
   import type { HeadingLevel } from './heading.types.js';
   import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
@@ -12,9 +11,9 @@
 <svelte:element
   this={level}
   class="heading"
-  style:--font-family={FONTS.heading.family}
-  style:--font-weight={FONTS.heading.weight}
-  style:--font-style={FONTS.heading.style}
+  style:--font-family={$tokens.fonts.heading.family}
+  style:--font-weight={$tokens.fonts.heading.weight}
+  style:--font-style={$tokens.fonts.heading.style}
   style:--color={$tokens.colors.text}
 >
   <slot />

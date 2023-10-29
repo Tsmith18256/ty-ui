@@ -1,7 +1,6 @@
 <script lang="ts">
   import { BUTTON_APPEARANCES } from './button.constants.js';
   import type { ButtonAppearance } from './button.types.js';
-  import { FONTS } from '$lib/constants/fonts/fonts.constants.js';
   import Icon from '$lib/components/icon/icon.svelte';
   import type { IconImage } from '$lib/components/icon/icon.types.js';
   import { getButtonBackgroundColor } from './button.utils.js';
@@ -34,8 +33,8 @@
   class="button"
   style:--color={$tokens.colors.buttonText}
   style:--background-color={getButtonBackgroundColor(appearance, $tokens.colors)}
-  style:--font-family={FONTS.body.family}
-  style:--font-style={FONTS.body.style}
+  style:--font-family={$tokens.fonts.body.family}
+  style:--font-style={$tokens.fonts.body.style}
   {disabled}
   on:click|stopPropagation
   data-testid={testId}

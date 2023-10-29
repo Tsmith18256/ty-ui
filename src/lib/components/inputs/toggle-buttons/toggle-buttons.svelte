@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { FONTS } from '$lib/constants/fonts/fonts.constants.js';
   import type { IToggleButton } from './toggle-buttons.types.js';
   import { tokens } from '$lib/stores/tokens/tokens.store.js';
 
@@ -18,8 +17,8 @@
       class:toggle-button-first={index === 0}
       class:toggle-button-last={index === toggleButtons.length - 1}
       class:toggle-button-active={value === toggleButton.value}
-      style:--font-family={FONTS.body.family}
-      style:--font-style={FONTS.body.style}
+      style:--font-family={$tokens.fonts.body.family}
+      style:--font-style={$tokens.fonts.body.style}
       style:--background-color={value === toggleButton.value
         ? $tokens.colors.primary
         : $tokens.colors.inactiveToggleButtonBackground}

@@ -1,4 +1,4 @@
-import type { ButtonAppearance } from '$lib/components/button/button.types.js';
+import type { ButtonAppearance } from '$lib/components/buttons/button/button.types.js';
 import type { IColors } from '$lib/stores/tokens/tokens.types.js';
 
 /**

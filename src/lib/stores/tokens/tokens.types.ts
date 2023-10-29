@@ -1,4 +1,4 @@
-import type { BREAKPOINTS, THEMES } from '$lib/stores/tokens/tokens.constants.js';
+import type { BREAKPOINTS, FONTS, THEMES } from '$lib/stores/tokens/tokens.constants.js';
 import type { ObjectValues } from '$lib/types/utility.types.js';
 
 /**
@@ -19,18 +19,33 @@ export interface IColors {
   negative: string;
   danger: string;
   warning: string;
-  // Core element colors.
+  // Core colors.
   background: string;
   text: string;
-  buttonText: string;
   border: string;
   overlayBackground: string;
-  // Specific component colors.
+  // Component colors.
+  buttonText: string;
+  placeholderText: string;
   inactiveToggleButtonColor: string;
   inactiveToggleButtonBackground: string;
 }
 
+/**
+ * An interface for the different CSS properties for each font.
+ */
+export interface IFont {
+  family: string;
+  weight: string;
+  style: string;
+}
+
+/**
+ * An interface representing the object held in the tokens store.
+ */
 export interface ITokens {
+  theme: Theme;
   colors: IColors;
   breakpoints: typeof BREAKPOINTS;
+  fonts: typeof FONTS;
 }

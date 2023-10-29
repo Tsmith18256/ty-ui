@@ -56,7 +56,7 @@ export default [
       'accessor-pairs': 'error',
       'array-callback-return': 'error',
       camelcase: 'error',
-      'capitalized-comments': 'error',
+      'capitalized-comments': ['error', { ignoreConsecutiveComments: true }],
       complexity: 'error',
       'consistent-return': 'error',
       'class-methods-use-this': 'error',
@@ -152,8 +152,14 @@ export default [
       'prefer-destructuring': [
         'error',
         {
-          array: true,
-          object: true,
+          VariableDeclarator: {
+            array: true,
+            object: true,
+          },
+          AssignmentExpression: {
+            array: false,
+            object: false,
+          },
         },
         {
           enforceForRenamedProperties: false,
@@ -185,6 +191,9 @@ export default [
       parser: svelteParser,
       parserOptions: {
         parser: typescriptParser,
+      },
+      globals: {
+        $$Generic: false,
       },
     },
   },
