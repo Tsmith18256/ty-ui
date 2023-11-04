@@ -20,7 +20,12 @@
 
 <Story
   name="Number"
-  args={{ id: 'numberField', label: 'Weight (lbs)', type: TEXT_INPUT_TYPES.number, placeholder: '172.5' }}
+  args={{ id: 'numberField', label: 'Weight (lbs)', type: TEXT_INPUT_TYPES.number, placeholder: '172' }}
+/>
+
+<Story
+  name="Float"
+  args={{ id: 'numberField', label: 'Weight (lbs)', type: TEXT_INPUT_TYPES.number, placeholder: '172.5', step: 0.1 }}
 />
 
 <Story
