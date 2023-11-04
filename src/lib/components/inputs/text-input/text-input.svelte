@@ -47,12 +47,22 @@
    */
   export let testId: string | undefined = undefined;
 
+  // -----------------------------
+  // PROPS SPECIFIC TO TYPE NUMBER
+  // -----------------------------
+
+  /**
+   * For numeric inputs, this specifies the HTML step attribute.
+   */
+  export let step: svelteHTML.IntrinsicElements['input']['step'] = undefined;
+
   /**
    * Updates the value prop. This is needed because Svelte won't allow you to bind to `value` on `<input />` when `type`
    * is dynamic.
    */
   const updateValue: FormEventHandler<HTMLInputElement> = e => {
     if (isNumber(value)) {
+      console.log(parseFloat(e.currentTarget.value));
       // @ts-expect-error - Can't figure out how to make TS happy here. The generic type is working correctly for the
       // props.
       value = parseFloat(e.currentTarget.value);
@@ -106,6 +116,8 @@
     style:--background-color={$tokens.colors.background}
     {type}
     {placeholder}
+    {step}
+    {value}
     on:input={updateValue}
   />
 </div>
