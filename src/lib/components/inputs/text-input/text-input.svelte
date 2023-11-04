@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FormEventHandler } from 'svelte/elements';
+  import type { FormEventHandler, HTMLAttributes, HTMLInputAttributes } from 'svelte/elements';
   import { TEXT_INPUT_TYPES } from '$lib/components/inputs/text-input/text-input.constants.js';
   import type { TextInputType } from '$lib/components/inputs/text-input/text-input.types.js';
   import { THEMES } from '$lib/stores/tokens/tokens.constants.js';
@@ -54,7 +54,7 @@
   /**
    * For numeric inputs, this specifies the HTML step attribute.
    */
-  export let step: svelteHTML.IntrinsicElements['input']['step'] = undefined;
+  export let step: HTMLInputAttributes['step'] = undefined;
 
   /**
    * Updates the value prop. This is needed because Svelte won't allow you to bind to `value` on `<input />` when `type`
