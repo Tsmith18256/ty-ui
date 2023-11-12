@@ -19,7 +19,7 @@ export { default as ToggleButtons } from '$lib/components/inputs/toggle-buttons/
 export * from '$lib/components/inputs/toggle-buttons/toggle-buttons.types.js';
 
 export { default as ButtonGroup } from '$lib/components/layout/button-group/button-group.svelte';
-export * from '$lib/components/layout/modal/modal.svelte';
+export { default as Modal } from '$lib/components/layout/modal/modal.svelte';
 
 export * from '$lib/components/typography/display-text/display-text.constants.js';
 export { default as DisplayText } from '$lib/components/typography/display-text/display-text.svelte';
